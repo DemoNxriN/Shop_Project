@@ -6,7 +6,33 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    height: 100dvh;
+
+
 }
 
-.container {
+#gridWrapper {
+    display: grid;
+    grid-template-rows: 15% 1fr 15%;
+    grid-template-columns: repeat(12, 1fr);
+    height: 100vh;
+}
+
+header,
+main,
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    min-height: 100%;
+}
+
+#header {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    justify-content: space-between;
+}
+
+h1 {}
+
+#logo {}
