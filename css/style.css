@@ -109,6 +109,13 @@ body {
     margin: 10px 0;
 }
 
+.socialicons {
+    grid-area: socialicons;
+    height: 3rem;
+    width: 3rem;
+
+}
+
 #contact {
     grid-area: contact;
     padding: 1em;
@@ -159,7 +166,9 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-column: span 12;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 13;
 }
 
 @media only screen and (min-width: 0px) {
