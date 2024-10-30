@@ -163,7 +163,7 @@ body {
 }
 
 /* Extra large phones (Xiaomi Redmi Note 11, 1080px and up) */
-@media only screen and (min-width: 1082px) {
+@media only screen and (min-width: 1000px) {
     .productsrow {
         grid-template-columns: 1fr 1fr;
     }
