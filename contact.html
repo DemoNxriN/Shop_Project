@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Shopped</title>
+    <title>Contacte</title>
   </head>
   <body>
     <div id="gridWrapper">
       <header id="header">
         <img id="logo" src="./img/logo.png" alt="logo shopped" />
-        <h1>Shopped</h1>
+        <h1>Contacte</h1>
         <nav id="navbar">
           <ul>
             <li><a href="./index.html">Inici</a></li>
@@ -20,7 +20,27 @@
           </ul>
         </nav>
       </header>
-      <main id="main"></main>
+      <main id="main">
+        <legend>
+          Contacta amb nostres
+          <form action="" method="post" id="contact">
+            <label for="name">Nom</label>
+            <input type="text" name="name" id="name" />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+            <label for="subject">Assumpte</label>
+            <input type="text" name="subject" id="subject" />
+            <label for="message">Missatge</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="60"
+              rows="20"
+            ></textarea>
+            <input id="submit" type="submit" value="Envia" />
+          </form>
+        </legend>
+      </main>
       <footer id="footer">
         <p>footer</p>
       </footer>

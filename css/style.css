@@ -61,10 +61,11 @@ body {
 #main {
     grid-area: main;
     padding: 2em;
-    background-color: var(--main-gray);
+    background-color: var(--main-color);
     display: flex;
     justify-content: center;
     grid-column: span 12;
+    align-items: center;
 }
 
 .productsrow {
@@ -104,6 +105,48 @@ body {
     height: auto;
     border-radius: 4px;
     margin: 10px 0;
+}
+
+#contact {
+    grid-area: contact;
+    padding: 2em;
+    background-color: var(--main-gray);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 28rem;
+    padding: 2em;
+    border: 1px solid var(--main-gray);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+legend {
+    text-align: center;
+    font-size: 1.2em;
+
+}
+
+label,
+input,
+textarea {
+    margin: 0.2em;
+}
+
+#submit {
+    margin-top: 1em;
+    padding: 0.5em;
+    background-color: var(--main-blue);
+    color: var(--main-color);
+    border: 1px solid var(--main-gray);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: var(--main-black);
 }
 
 #footer {
