@@ -94,9 +94,9 @@ body {
     color: var(--main-black);
 }
 
-.product p {
+.product button {
     font-size: 1em;
-    color: var(--main-gray);
+    color: var(--main-black);
 }
 
 .product img {
