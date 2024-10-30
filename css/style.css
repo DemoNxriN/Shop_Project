@@ -127,7 +127,6 @@ body {
     }
 }
 
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .productsrow {
@@ -160,6 +159,17 @@ body {
 
     .product {
         grid-column: span 2;
+    }
+}
+
+/* Extra large phones (Xiaomi Redmi Note 11, 1080px and up) */
+@media only screen and (min-width: 1080px) {
+    .productsrow {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product {
+        grid-column: span 1;
     }
 }
 
