@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="./img/ico/favicon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Contacta amb nosaltres</title>
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <img id="logo" src="./img/ico/favicon.png" alt="logo Bookniversity">
+            <h1>Contacta amb nosaltres</h1>
+            <form id="search-container">
+                <input id="search" type="text" placeholder="Cercar llibre">
+                <button id="search-button" type="submit"></button>
+            </form>
+            <div id="menu-nav">
+                <button id="menu-icon" src="./img/ico/menu.svg" alt="Menu icon nav"></button>
+                <nav id="navbar">
+                    <ul>
+                        <li><a href="./index.html">Inici</a></li>
+                        <li><a href="./catalog.html">Catàleg</a></li>
+                        <li><a class="active" href="./contact.html">Contacte</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
+        <main id="main">
+            <h2>Contacta amb nosaltres</h2>
+            <div id="container-form"> 
+                <div id="contact-form">
+                    <form method="post" id="content-form">
+                        <label for="name">Nom</label>
+                        <input type="text" name="name" id="name" required>
+                        <label for="lname">Cognoms</label>
+                        <input type="text" name="lname" id="lname" required>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                        <label for="subject">Asumpte</label>
+                        <input type="text" name="subject" id="subject" required>
+                        <label for="message">Missatge</label>
+                        <textarea name="message" id="message" cols="60" rows="8" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d186.4478928152795!2d2.2891247988468386!3d41.60891575076471!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4c7c5876a6455%3A0x464389507d056ea4!2sEscuela%20Educem%20Business!5e0!3m2!1ses!2ses!4v1730666507485!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+        </main>
+        <footer id="footer">
+            <div id="social">
+                <a href="https://www.twitter.com" target="_blank"><img class="socialicons" src="./img/ico/x-icon.svg" alt="Logo Twitter"></a>
+                <a href="https://www.facebook.com" target="_blank"><img class="socialicons" src="./img/ico/facebook-icon.svg" alt="Logo Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank"><img class="socialicons" src="./img/ico/instagram-icon.svg" alt="Logo Instagram"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
