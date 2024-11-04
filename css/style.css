@@ -8,11 +8,12 @@
 
 /* Variables */
 :root {
-    --primary-font: 'Poppins', sans-serif;
+    --primary-font: 'Poppins';
     --main-orange: rgba(201, 91, 37, 1);
     --main-blue:  rgba(28, 72, 101, 1);
     --secondary-blue: rgba(58, 107, 138, 1);
-    --font-color: rgba(255, 255, 255, 1);
+    --main-color: rgba(255, 255, 255, 1);
+    --secondary-color: rgba(0, 0, 0, 1);
 }
 
 /* Reset */
@@ -28,7 +29,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 100px 1fr 100px;
-    height: 100vh;
+    min-height: 100vh;
     grid-template-areas:
         "header header header header header header header header header header header header"
         "main main main main main main main main main main main main"
@@ -43,7 +44,7 @@
     grid-template-areas: "logo title search-container navbar";
     align-items: center;
     background-color: var(--main-blue);
-    color: var(--font-color);
+    color: var(--main-color);
 }
 
 /* Logo Style */
@@ -68,11 +69,12 @@
 }
 
 #search {
-    width: 85%;
+    width: 90%;
     height: 2.5rem;
     border-radius: 3px;
     border: none;
-    margin: auto;
+    margin: 0.5em;
+    padding: 0.5em;
 }
 
 #search-button {
@@ -80,7 +82,7 @@
     height: 2.5rem;
     border: none;
     border-radius: 2px;
-    margin: auto;
+    margin: 0.5em;
     cursor: pointer;
     background-image: url(../img/ico/search-icon.svg);
     background-size: 80%;
@@ -92,6 +94,27 @@
 /* Navbar Style */
 #menu-icon {
     display: none;
+    cursor: pointer;
+    height: 4rem;
+    width: 4rem;
+    background-image: url(../img/ico/menu.svg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#menu-icon:hover {
+    background-color: var(--main-orange);
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
 }
 
 #menu-nav {
@@ -118,7 +141,7 @@
 }
 
 #navbar a {
-    color: var(--font-color);
+    color: var(--main-color);
     text-decoration: none;
     width: 100%;
     height: 100%;
@@ -144,14 +167,22 @@
 /* Main Style */
 #main {
     grid-area: main;
-    padding: 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.5em;
 }
+
 
 /* Contact Form Style */
 #container-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    width: 100%;
+
 }
 
 iframe {
@@ -160,6 +191,7 @@ iframe {
     margin: 0.2em;
     width: 80%;
     height: 100%;
+    min-height: 600px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -178,7 +210,6 @@ iframe {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 0.2em;
 }
 
 #content-form {
@@ -206,28 +237,44 @@ iframe {
 
 #content-form button {
     background-color: var(--main-orange);
-    color: var(--font-color);
+    color: var(--main-color);
+    margin-top: 0.4em;
+}
+
+#content-form button:hover {
+    color: var(--main-color);
+    background-color: var(--secondary-blue);
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
 }
 
 /* Container Products Style */
 .productsrow {
     display: grid;
     gap: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
     grid-template-columns: repeat(4, 1fr);
+    width: 100%;
 }
 
 /* Products Style */
 .products {
     border: 1px solid var(--main-blue);
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 300px;
+    height: 400px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .product-content {
@@ -236,26 +283,34 @@ iframe {
 }
 
 .products img {
-    max-width: 100%;
-    height: 50%;
+    height: 70%;
 }
 
 .products h3 {
+    height: 10%;
     font-size: 1.2em;
-    color: var(--main-blue);
+    color: var(--secondary-color);
 }
 
 .products p {
+    height: 10%;
     font-size: 1em;
-    color: var(--main-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
 }
 
 .products a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
+    height: 10%;
+    width: 80%;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: var(--main-orange);
-    color: var(--font-color);
+    color: var(--main-color);
     text-decoration: none;
     border-radius: 3px;
     bottom: 0;
@@ -275,7 +330,7 @@ iframe {
     grid-template-columns: 3fr 3fr 3fr;
     grid-template-areas: "privacity socialmedia contact";
     background-color: var(--main-blue);
-    color: var(--font-color);
+    color: var(--main-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -289,17 +344,21 @@ iframe {
     align-items: center;
 }
 
+
 #social {
     grid-area: socialmedia;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
+
 
 .socialicons {
     height: 3rem;
     width: 3rem;
     margin: 0.2em;
+    display: flex;
 }
 
 #contact {
@@ -326,13 +385,7 @@ iframe {
     #menu-icon {
         display: flex;
         grid-area: navbar;
-        cursor: pointer;
-        height: 40px;
-        width: 40px;
-        background-image: url(../img/ico/menu.svg);
-        background-size: 80%;
-        background-repeat: no-repeat;
-        background-position: center;
+
     }
     #navbar {
         display: none;
