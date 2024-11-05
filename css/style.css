@@ -470,4 +470,8 @@ iframe {
     .productsrow {
         grid-template-columns: 1fr;
     }
+
+    .products {
+        height: 450px;
+    }
 }
