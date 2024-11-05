@@ -11,7 +11,6 @@
     --primary-font: 'Poppins';
     --main-orange: rgba(201, 91, 37, 1);
     --main-blue:  rgba(28, 72, 101, 1);
-    --secondary-blue: rgba(58, 107, 138, 1);
     --main-color: rgba(255, 255, 255, 1);
     --secondary-color: rgba(0, 0, 0, 1);
 }
@@ -236,7 +235,7 @@ iframe {
 
 #content-form button:hover {
     color: var(--main-color);
-    background-color: var(--secondary-blue);
+    background-color: var(--main-blue);
     transition: background-color 0.3s ease;
     -webkit-transition: background-color 0.3s ease;
     -moz-transition: background-color 0.3s ease;
