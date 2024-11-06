@@ -49,9 +49,11 @@ header {
 
 /* Logo Style */
 #logo {
+    display: flex;
     grid-area: logo;
     max-height: 100px;
     width: auto;
+
 }
 
 /* Search Style */
@@ -148,10 +150,6 @@ header {
 #navbar a:hover {
     background-color: var(--main-orange);
     transition: background-color 0.3s ease;
-    -webkit-transition: background-color 0.3s ease;
-    -moz-transition: background-color 0.3s ease;
-    -ms-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
 }
 
 #navbar a.active {
@@ -250,7 +248,7 @@ iframe {
     gap: 2rem;
     padding: 1rem;
     grid-template-columns: repeat(4, 1fr);
-    width: 70%;;
+    width: 70%;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -445,6 +443,7 @@ footer {
     header {
         grid-template-columns: 0.5fr 3fr 0.5fr;
     }
+
 
     #navbar {
         display: none;
