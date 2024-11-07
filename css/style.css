@@ -98,19 +98,11 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 
 #menu-icon:hover {
     background-color: var(--main-orange);
     transition: background-color 0.3s ease;
-    -webkit-transition: background-color 0.3s ease;
-    -moz-transition: background-color 0.3s ease;
-    -ms-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
 }
 
 #menu-nav {
@@ -179,14 +171,8 @@ main {
 
 iframe {
     border-radius: 5px;
-    margin: 0.2em;
     width: 80%;
-    height: 100%;
-    min-height: 600px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    height: 500px;
 }
 
 #map {
@@ -212,18 +198,19 @@ iframe {
     border: 2px solid var(--main-blue);
     border-radius: 5px;
     padding: 20px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
     width: 80%;
+    height: 500px;
 }
 
-#content-form label, #content-form input, #content-form textarea, #content-form button {
+#content-form input, #content-form textarea, #content-form button {
     font-size: 1.2em;
-    margin: 0.1em;
+    margin: 0.2em;
     resize: none;
     width: 100%;
+}
+
+#content-form label { 
+    display: none;
 }
 
 #content-form button {
@@ -236,10 +223,6 @@ iframe {
     color: var(--main-color);
     background-color: var(--main-blue);
     transition: background-color 0.3s ease;
-    -webkit-transition: background-color 0.3s ease;
-    -moz-transition: background-color 0.3s ease;
-    -ms-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
 }
 
 /* Container Products Style */
@@ -267,23 +250,11 @@ iframe {
     text-align: center;
     height: 400px;
     width: 100%;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 
 .products:hover {
     transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
     transition: transform 0.3s ease;
-    -webkit-transition: transform 0.3s ease;
-    -moz-transition: transform 0.3s ease;
-    -ms-transition: transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
 }
 
 .product-content {
@@ -317,15 +288,10 @@ iframe {
     display: flex;
     align-items: center;
     justify-content: center;
-
     background-color: var(--main-orange);
     color: var(--main-color);
     text-decoration: none;
     border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
 }
 
 .products a:hover {
@@ -339,10 +305,7 @@ footer {
     grid-template-areas: "privacity socialmedia contact";
     background-color: var(--main-blue);
     color: var(--main-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
 }
 
 #privacity {
@@ -352,14 +315,34 @@ footer {
     align-items: center;
 }
 
+#privacity a {
+    color: var(--main-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-orange);
+    padding: 0.5em;
+    border-radius: 3px;
+}
+    
+#privacity a:hover {
+    background-color: var(--main-orange);
+    transition: background-color 0.3s ease;
+}
 
-#social {
+#undersocial {
     grid-area: socialmedia;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+#social {
+    grid-area: socialmedia;
+    display: flex;
+}
 
 .socialicons {
     height: 3rem;
@@ -371,6 +354,7 @@ footer {
 #contact {
     grid-area: contact;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -379,6 +363,7 @@ footer {
 @media (max-width: 1300px) {
     body {
         grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 100px 1fr 200px;
     }
     
     header {
@@ -395,7 +380,7 @@ footer {
     }
 
     #container-form {
-        display: grid;
+        
         grid-template-columns: 1fr;
     }
 
@@ -408,6 +393,7 @@ footer {
 @media (max-width: 1024px) {
     body {
         grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 100px 1fr 200px;
     }
     
     header {
@@ -424,7 +410,6 @@ footer {
     }
 
     #container-form {
-        display: grid;
         grid-template-columns: 1fr;
     }
 
@@ -437,7 +422,7 @@ footer {
 @media (max-width: 650px) {
     body {
         grid-template-columns: 1fr;
-        grid-template-rows: 100px 1fr 100px;
+        grid-template-rows: 100px 1fr 300px;
     }
     
     header {
@@ -450,7 +435,6 @@ footer {
     }
 
     #container-form {
-        display: grid;
         grid-template-columns: 1fr;
     }
 
