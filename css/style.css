@@ -151,7 +151,6 @@ header {
 /* Main Style */
 main {
     grid-area: main;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -223,6 +222,11 @@ iframe {
     color: var(--main-color);
     background-color: var(--main-blue);
     transition: background-color 0.3s ease;
+}
+
+/* Privacity Style */
+#privacity-container {
+    width: 70%;
 }
 
 /* Container Products Style */
