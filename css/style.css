@@ -103,6 +103,10 @@ header {
 #menu-icon:hover {
     background-color: var(--main-orange);
     transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
 }
 
 #menu-nav {
